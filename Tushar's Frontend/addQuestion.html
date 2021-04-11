@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Question</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/addQuestion.css">
+</head>
+<body>
+  <div class="container">
+    <br>
+    <br>
+    <a href="./admin.html"><button class="btn btn-primary justify-content-center">Back</button></a>
+    <br>
+  </div>
+
+  <div class="container">
+    <br>
+    <br>
+    <form name="quizForm" method="POST" action="">
+      <div class="form col-12">
+        <div class="card">
+          <div class="card-header bg-dark py-4 text-info text-center"><h1>Add A Question</h1></div>
+
+          <div class="card-body bg-light py-4 text-info">
+            <div class="col-md-12 mb-3">
+              <label for="question">Question</label>
+              <textarea class="form-control" name="question" id="question" placeholder="Write your question" rows="4" required></textarea>
+            </div>
+
+            <div class="btn-group dropright justify-content-center">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Total Options</button>
+              <div class="dropdown-menu" id="dropdown-btn">
+                <button class="dropdown-item active" onclick="showOption2()" id="btnOptions2">2 Options</button>
+                <button class="dropdown-item" onclick="showOption3()" id="btnOptions3">3 Options</button>
+                <button class="dropdown-item" onclick="showOption4()" id="btnOptions4">4 Options</button>
+              </div>
+            </div>
+
+            <br>
+            <br> 
+            <br>
+
+            <div class="col-md-12 mb-3" id="option1">
+              <label for="option1">Option 1</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" id="checkOption1" name="Answer" value="1">
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="opt1" name="opt1" placeholder="Option 1" required>
+              </div>
+            </div>
+
+            <div class="col-md-12 mb-3" id="option2">
+              <label for="option2">Option 2</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" id="checkOption2" name="Answer" value="2">
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="opt2" name="opt2" placeholder="Option 2" required>
+              </div>
+            </div>
+
+
+            <div class="col-md-12 mb-3" id="option3">
+              <label>Option 3</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" id="checkOption3" name="Answer" value="3">
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="opt3" name="opt3" placeholder="Option 3">
+              </div>
+            </div>
+
+                  
+            <div class="col-md-12 mb-3" id="option4">
+              <label for="option4">Option 4</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" id="checkOption4" name="Answer" value="4">
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="opt4" name="opt4" placeholder="Option 4">
+              </div>
+            </div>   
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+    <br>
+    
+  </div>
+  <div class="container text-center">
+    <button class="btn btn-success" type="submit" onClick="empty()">Save Question</button>
+  </div>
+
+  <br>
+  <div class="container text-center">
+    <h3 id="demo">
+
+    </h3>
+</div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript" src="./js/writeDB.js"></script>
+
+
+
+</script>
+</body>
+</html>
